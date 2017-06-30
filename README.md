@@ -29,7 +29,7 @@ We made a ton easier to build and install Blink yourself on your iOS devices thr
 
 ```bash
 git clone --recursive https://github.com/animaonline/hypershell.git && \
-cd blink && ./get_frameworks.sh
+cd hypershell && ./get_frameworks.sh
 ```
 
 Although this is the quickest method to get you up and running, if you would like to compile all libraries and resources yourself, refer to [BUILD](https://github.com/blinksh/blink/blob/master/BUILD). Please let us know if you find any issues. Blink is a complex project with multiple low level dependencies and we are still looking for ways to simplify and automate the full compilation process.
