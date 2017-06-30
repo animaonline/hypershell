@@ -339,7 +339,7 @@
   UIPageControl *pages = [self pageControl];
 
   NSInteger idx = [_viewports indexOfObject:self.currentTerm];
-  NSString *title = self.currentTerm.terminal.title.length ? self.currentTerm.terminal.title : @"blink";
+  NSString *title = self.currentTerm.terminal.title.length ? self.currentTerm.terminal.title : @"hypershell";
   NSString *geometry = [NSString stringWithFormat:@"%d x %d", self.currentTerm.terminal.rowCount, self.currentTerm.terminal.columnCount];
 
   _hud.label.numberOfLines = 2;

@@ -47,9 +47,9 @@
   UITableViewCell *clickedCell = [tableView cellForRowAtIndexPath:indexPath];
 
   if (clickedCell == self.issuesCell) {
-    [BKLinkActions sendToGitHub:@"blink/issues"];
+    [BKLinkActions sendToGitHub:@"/issues"];
   } else if (clickedCell == self.reportCell) {
-    [BKLinkActions sendToGitHub:@"blink/issues/new"];
+    [BKLinkActions sendToGitHub:@"/issues/new"];
   } else if (clickedCell == self.emailCell) {
     [BKLinkActions sendToEmailApp];
   }

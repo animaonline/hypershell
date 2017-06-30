@@ -32,7 +32,7 @@
 #import "UIDevice+DeviceName.h"
 
 #define DEFAULT_USER_NAME @"user"
-#define DEFAULT_DEVICE_NAME @"blink"
+#define DEFAULT_DEVICE_NAME @"hypershell"
 
 @implementation UIDevice (DeviceName)
 

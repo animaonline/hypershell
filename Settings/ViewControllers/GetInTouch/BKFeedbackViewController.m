@@ -34,7 +34,6 @@
 
 @interface BKFeedbackViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableViewCell *twitterLinkCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *githubLinkCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *appstoreLinkCell;
 
@@ -46,9 +45,7 @@
 {
   UITableViewCell *clickedCell = [tableView cellForRowAtIndexPath:indexPath];
 
-  if (clickedCell == self.twitterLinkCell) {
-    [BKLinkActions sendToTwitter];
-  } else if (clickedCell == self.githubLinkCell) {
+  if (clickedCell == self.githubLinkCell) {
     [BKLinkActions sendToGitHub:nil];
   } else if (clickedCell == self.appstoreLinkCell) {
     [BKLinkActions sendToAppStore];

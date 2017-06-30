@@ -317,12 +317,12 @@ static const char *usage_format =
   }
 
   if (!_moshParams.ip) {
-    *error = [NSError errorWithDomain:@"blink.mosh.ssh" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"Did not find remote IP address" }];
+    *error = [NSError errorWithDomain:@"hypershell.mosh.ssh" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"Did not find remote IP address" }];
     return;
   }
 
   if (_moshParams.key == nil || _moshParams.port == nil) {
-    *error = [NSError errorWithDomain:@"blink.mosh.ssh" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"Did not find remote IP address" }];
+    *error = [NSError errorWithDomain:@"hypershell.mosh.ssh" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"Did not find remote IP address" }];
     return;
   }
 }

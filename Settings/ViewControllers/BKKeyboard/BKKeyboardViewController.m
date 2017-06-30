@@ -112,7 +112,7 @@ NSString *const BKKeyboardFuncTriggerChanged = @"BKKeyboardFuncTriggerChanged";
     case 1:
       return @"SPECIAL KEYS";
     case 2:
-      return @"BLINK SHORTCUTS";
+      return @"HYPERSHELL SHORTCUTS";
   }
   return nil;
 }

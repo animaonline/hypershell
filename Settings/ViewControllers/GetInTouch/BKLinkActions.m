@@ -35,22 +35,9 @@
 
 @implementation BKLinkActions
 
-+ (void)sendToTwitter
-{
-  NSURL *twitterApp = [NSURL URLWithString:@"twitter:///BlinkShell?screen_name=PAGE"];
-  NSURL *twitterURL = [NSURL URLWithString:@"https://twitter.com/BlinkShell"];
-
-  UIApplication *app = [UIApplication sharedApplication];
-  if ([app canOpenURL:twitterApp]) {
-    [app openURL:twitterApp];
-  } else {
-    [app openURL:twitterURL];
-  }
-}
-
 + (void)sendToGitHub:(NSString *)location
 {
-  NSURL *githubURL = [NSURL URLWithString:@"https://github.com/BlinkSh"];
+  NSURL *githubURL = [NSURL URLWithString:@"https://github.com/animaonline/hypershell"];
   if (location) {
     githubURL = [githubURL URLByAppendingPathComponent:location];
   }
@@ -69,7 +56,7 @@
 
 + (void)sendToEmailApp
 {
-  NSURL *mailURL = [NSURL URLWithString:@"mailto:support@blink.sh"];
+  NSURL *mailURL = [NSURL URLWithString:@"mailto:animaonline@gmail.com"];
 
   [[UIApplication sharedApplication] openURL:mailURL];
 }

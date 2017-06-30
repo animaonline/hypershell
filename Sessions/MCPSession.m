@@ -84,7 +84,7 @@
 
   linenoiseHistoryLoad(history);
 
-  while ((line = [self linenoise:"blink> "]) != nil) {
+  while ((line = [self linenoise:"hypershell> "]) != nil) {
     if (line[0] != '\0' && line[0] != '/') {
       linenoiseHistoryAdd(line);
       linenoiseHistorySave(history);
@@ -111,7 +111,11 @@
         [self runSSHCopyIDWithArgs:cmdline];
       } else if ([cmd isEqualToString:@"config"]) {
         [self showConfig];
-      } else {
+      }
+      else if([cmd isEqualToString:@"clear"]){
+        [self clearScreen];
+      }
+      else {
         [self out:"Unknown command. Type 'help' for a list of available operations"];
       }
     }
@@ -125,11 +129,18 @@
 
   return 0;
 }
+  
+- (void)executeWithArgs:(NSString *)args{
+  [super executeWithArgs:args];
+}
 
-- (void)showConfig
-{
+- (void)showConfig{
   [[UIApplication sharedApplication]
     sendAction:NSSelectorFromString(@"showConfig:") to:nil from:nil forEvent:nil];
+}
+
+- (void)clearScreen{
+  [self.stream.control.terminal clear];
 }
 
 - (void)runSSHCopyIDWithArgs:(NSString *)args

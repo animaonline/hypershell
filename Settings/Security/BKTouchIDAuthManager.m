@@ -31,7 +31,7 @@
 
 #import "BKTouchIDAuthManager.h"
 #import "BKUserConfigurationManager.h"
-#import "Blink-swift.h"
+#import "Hypershell-Swift.h"
 
 @import LocalAuthentication;
 

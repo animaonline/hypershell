@@ -419,7 +419,7 @@ static int SshEncodeBuffer(unsigned char *pEncoding, int bufferLen, unsigned cha
 - (NSString *)activityViewController:(UIActivityViewController *)activityViewController
               subjectForActivityType:(UIActivityType)activityType
 {
-  return [NSString stringWithFormat:@"Blink Public Key: %@", _ID];
+  return [NSString stringWithFormat:@"Hypershell Public Key: %@", _ID];
 }
 
 - (NSString *)activityViewController:(UIActivityViewController *)activityViewController dataTypeIdentifierForActivityType:(UIActivityType)activityType
