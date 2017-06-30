@@ -33,6 +33,7 @@
 #import "BKiCloudSyncHandler.h"
 #import "BKTouchIDAuthManager.h"
 #import "ScreenController.h"
+#import "StyleManager.h"
 @import CloudKit;
 
 @interface AppDelegate ()
@@ -41,11 +42,12 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
   [[BKTouchIDAuthManager sharedManager]registerforDeviceLockNotif];
   
   [[ScreenController shared] setup];
+  
+  [[StyleManager sharedManager] applyStyle:HypershellStyleDevDefault];
 
   return YES;
 }

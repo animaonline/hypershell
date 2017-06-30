@@ -20,13 +20,17 @@
         position: relative;
         width: 100%;
         height: 100%;
+        margin-left: 4pt;
+        margin-right: 4pt;
+        margin-top: 2pt;
+        margin-bottom: 2pt;
       }    
     </style>
   <body>
     <div id="terminal"></div>
     <script>
       hterm.defaultStorage = new lib.Storage.Memory();
-      var t = new hterm.Terminal('blink');
+      var t = new hterm.Terminal('hypershell');
 
       t.decorate(document.querySelector('#terminal'));
 

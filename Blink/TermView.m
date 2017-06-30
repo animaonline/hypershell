@@ -246,6 +246,7 @@ NSString *const TermViewAutoRepeateSeq = @"autoRepeatSeq:";
   [_webView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
   [_webView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
   [_webView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+  _webView.alpha = 0;
 }
 
 - (void)addGestures
@@ -366,9 +367,7 @@ NSString *const TermViewAutoRepeateSeq = @"autoRepeatSeq:";
       [self.delegate updateTermRows:data[@"rows"] Cols:data[@"columns"]];
     }
   } else if ([operation isEqualToString:@"terminalReady"]) {
-    if ([self.delegate respondsToSelector:@selector(terminalIsReady)]) {
-      [self.delegate terminalIsReady];
-    } 
+    [self onTerminalIsReady];
   } else if ([operation isEqualToString:@"fontSizeChanged"]) {
     if ([self.delegate respondsToSelector:@selector(fontSizeChanged:)]) {
       [self.delegate fontSizeChanged:data[@"size"]];
@@ -376,6 +375,16 @@ NSString *const TermViewAutoRepeateSeq = @"autoRepeatSeq:";
   } else if ([operation isEqualToString:@"copy"]) {
     [[UIPasteboard generalPasteboard] setString:data[@"content"]];
   }
+}
+
+- (void)onTerminalIsReady{
+  if ([self.delegate respondsToSelector:@selector(terminalIsReady)]) {
+    [self.delegate terminalIsReady];
+  }
+  
+  [UIView animateWithDuration:0.5 animations:^{
+    self.webView.alpha = 1;
+  }];
 }
 
 #pragma mark On-Screen keyboard - UIKeyInput

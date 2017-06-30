@@ -75,4 +75,12 @@
 - (IBAction)unwindFromDefaultUser:(UIStoryboardSegue *)sender
 {
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+  UITableViewHeaderFooterView *headerFooter = (UITableViewHeaderFooterView*)view;
+  
+  headerFooter.backgroundColor = [UITableViewHeaderFooterView appearance].contentView.backgroundColor;
+  headerFooter.contentView.backgroundColor = headerFooter.backgroundColor;
+  headerFooter.tintColor = headerFooter.backgroundColor;
+}
 @end

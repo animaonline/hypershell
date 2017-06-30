@@ -70,6 +70,7 @@
 		07F670751D05EEE200C0A53C /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F6706C1D05EEE200C0A53C /* Session.m */; };
 		07F670761D05EEE200C0A53C /* SSHCopyIDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F6706E1D05EEE200C0A53C /* SSHCopyIDSession.m */; };
 		07F670771D05EEE200C0A53C /* SSHSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F670701D05EEE200C0A53C /* SSHSession.m */; };
+		39F72F851F06D91200E65522 /* StyleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F72F841F06D91200E65522 /* StyleManager.m */; };
 		B700AED81DD0F2C200100EBF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B700AED71DD0F2C200100EBF /* CloudKit.framework */; };
 		B75112CD1DE4A7B10040C693 /* BKiCloudConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75112CC1DE4A7B10040C693 /* BKiCloudConfigurationViewController.m */; };
 		B752EE2B1DFEF19D00E305C8 /* BKUserConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B752EE2A1DFEF19D00E305C8 /* BKUserConfigurationManager.m */; };
@@ -263,6 +264,8 @@
 		07F6706E1D05EEE200C0A53C /* SSHCopyIDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHCopyIDSession.m; sourceTree = "<group>"; };
 		07F6706F1D05EEE200C0A53C /* SSHSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHSession.h; sourceTree = "<group>"; };
 		07F670701D05EEE200C0A53C /* SSHSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHSession.m; sourceTree = "<group>"; };
+		39F72F831F06D91200E65522 /* StyleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleManager.h; sourceTree = "<group>"; };
+		39F72F841F06D91200E65522 /* StyleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleManager.m; sourceTree = "<group>"; };
 		B700AED71DD0F2C200100EBF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B75112CB1DE4A7B10040C693 /* BKiCloudConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKiCloudConfigurationViewController.h; sourceTree = "<group>"; };
 		B75112CC1DE4A7B10040C693 /* BKiCloudConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKiCloudConfigurationViewController.m; sourceTree = "<group>"; };
@@ -378,6 +381,8 @@
 				D20A28BD1E185BDB00055791 /* ScreenController.m */,
 				079635851D0E6602000473B1 /* fterm.m */,
 				079635861D0E6602000473B1 /* fterm.h */,
+				39F72F831F06D91200E65522 /* StyleManager.h */,
+				39F72F841F06D91200E65522 /* StyleManager.m */,
 			);
 			path = Blink;
 			sourceTree = "<group>";
@@ -933,6 +938,7 @@
 			files = (
 				07AA064F1E08B12E008310B7 /* PasscodeLock.swift in Sources */,
 				073D26C11DC4137000965AB2 /* SmartKeysView.m in Sources */,
+				39F72F851F06D91200E65522 /* StyleManager.m in Sources */,
 				B7A4876D1DC7C709007BA809 /* BKSettingsViewController.m in Sources */,
 				C94E9B631D6BA21C00DA4DD6 /* DismissSegue.m in Sources */,
 				0716B5721CFFAB9300268B5B /* AppDelegate.m in Sources */,

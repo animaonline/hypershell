@@ -110,7 +110,7 @@ NSString const *BKKeyboardFuncShortcutTriggers = @"Shortcuts";
   }
 
   if (!defaults.fontName) {
-    [defaults setFontName:@"Source Code Pro"];
+    [defaults setFontName:@"Menlo"];
   }
   if (!defaults.themeName) {
     [defaults setThemeName:@"Default"];

@@ -84,6 +84,12 @@
 
   linenoiseHistoryLoad(history);
 
+  [self out:[[self shortVersionString] UTF8String]];
+  [self out:""];
+  [self out:"To get started:\r\n  #1 Type 'config'\r\n  #2 Add your host and username\r\n  #3 Type 'ssh yourhostname'"];
+  [self out:""];
+  [self out:"  Or type 'help' for more info."];
+
   while ((line = [self linenoise:"hypershell> "]) != nil) {
     if (line[0] != '\0' && line[0] != '/') {
       linenoiseHistoryAdd(line);
