@@ -116,7 +116,7 @@ NSString const *BKKeyboardFuncShortcutTriggers = @"Shortcuts";
     [defaults setThemeName:@"Default"];
   }
   if (!defaults.fontSize) {
-    [defaults setFontSize:[NSNumber numberWithInt:10]];
+    [defaults setFontSize:[NSNumber numberWithInt:12]];
   }
   if(!defaults.defaultUser || ![[defaults.defaultUser stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]){
     [defaults setDefaultUser:[UIDevice getInfoTypeFromDeviceName:BKDeviceInfoTypeUserName]];

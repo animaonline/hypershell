@@ -342,6 +342,9 @@
   NSString *title = self.currentTerm.terminal.title.length ? self.currentTerm.terminal.title : @"hypershell";
   NSString *geometry = [NSString stringWithFormat:@"%d x %d", self.currentTerm.terminal.rowCount, self.currentTerm.terminal.columnCount];
 
+  if(self.currentTerm.terminal.rowCount == 0 && self.currentTerm.terminal.columnCount == 0)
+    return;
+  
   _hud.label.numberOfLines = 2;
   _hud.label.text = [NSString stringWithFormat:@"%@\n%@", title, geometry];
 
